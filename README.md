@@ -1,5 +1,5 @@
-# odin-ceaser-cypher
-Ceaser Cypher in Ruby 
+# odin-caesar-cypher
+Caesar Cypher in Ruby 
 For The Odin Project
 
 From Wikipedia:
