@@ -1,15 +1,12 @@
 #ASCII CODES: Uppercase Z = 90 / A = 65 , Lowercase z = 122 / a = 97, space = 32
 def caeser_cipher (string, offset)
-  code_array = string.codepoints
-  code_array_offset = code_array.map {|code| 
+  code_array_offset = string.codepoints.map {|code| 
   if code < 65 || code > 122 || code > 90 && code <97 #doesn't continue if outside number range
     code
   elsif code + offset > 122 #loops past z if needed
-    remainder = 123 - code
-    97 + offset - remainder
+    97 + offset - (123 - code)
   elsif code + offset > 90 && code <= 90 #loops past Z if needed
-    remainder = 91 - code
-    65 + offset - remainder
+    65 + offset - (91 - code)
   else 
     code + offset
   end
