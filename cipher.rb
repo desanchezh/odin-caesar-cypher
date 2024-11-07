@@ -1,8 +1,8 @@
-# ASCII_CODES Uppercase Z = 90 / A = 65 , Lowercase z = 122 / a = 97, space = 32 # rubocop:disable Style/FrozenStringLiteralComment
+# ASCII_CODES Uppercase Z = 90 / A = 65 , Lowercase z = 122 / a = 97, space = 32
 
 def caeser_cipher(string, offset)
   code_array_offset = string.codepoints.map do |code|
-    if code < 65 || code > 122 || code > 90 && code < 97 # doesn't continue if outside number range
+    if code < 65 || code > 122 || (code > 90 && code < 97) # doesn't continue if outside number range
       code
     elsif code + offset > 122 # loops past z if needed
       97 + offset - (123 - code)
