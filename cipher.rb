@@ -12,7 +12,6 @@ def caeser_cipher(string, offset)
       code + offset
     end
   end
-  puts code_array_offset.map(&:chr).join('')
+  puts code_array_offset.map(&:chr).join
 end
-
-caeser_cipher('What a string!', 5)
+caeser_cipher("What a string!", 5)
